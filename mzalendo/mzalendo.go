@@ -27,7 +27,7 @@ const (
 type Client struct {
 	client  *http.Client
 	BaseURL *url.URL
-	Persons *PersonService
+	Api     *Api
 }
 
 func NewClient(httpClient *http.Client) *Client {
@@ -38,7 +38,7 @@ func NewClient(httpClient *http.Client) *Client {
 	baseURL, _ := url.Parse(defaultBaseURL)
 
 	c := &Client{client: httpClient, BaseURL: baseURL}
-	c.Persons = &PersonService{client: c}
+	c.Api = &Api{client: c}
 
 	return c
 }

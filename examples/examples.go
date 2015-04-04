@@ -8,11 +8,18 @@ import (
 
 func main() {
 	client := mzalendo.NewClient(nil)
-	results, err := client.Persons.GetPerson("1290")
+	r, err := client.Api.GetPerson("1290")
 	if err != nil {
-		fmt.Printf("error: %v\n", err)
+		fmt.Printf("%v\n", err)
 	}
 
-	fmt.Print(results)
+	fmt.Println(r.Result.Name)
+
+	org, err := client.Api.GetOrganization("148")
+	if err != nil {
+		fmt.Printf("%v\n", err)
+	}
+
+	fmt.Println(org.Result.Name)
 
 }
