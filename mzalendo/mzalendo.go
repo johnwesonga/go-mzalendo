@@ -2,10 +2,9 @@
 Package mzalendo provides a client for using the Mzalendo API.
 Access different parts of the  API using the various
 services.
-         apiToken := "api-token"
          client := mzalendo.NewClient(nil)
          // search for an interest
-         results, _, err := client.Topics.SearchForInterest("Clojure")
+         results, err := client.Api.GetPerson("1290")
 The full Mzalendo API is documented at http://info.mzalendo.com/help/api.
 */
 package mzalendo
