@@ -21,7 +21,7 @@ import (
 
 const (
 	libraryVersion = "0.1"
-	defaultBaseURL = "https://kenyan-politicians.popit.mysociety.org/api/v0.1/"
+	defaultBaseURL = "http://kenyan-politicians.popit.mysociety.org/api/v0.1/"
 )
 
 type Client struct {
