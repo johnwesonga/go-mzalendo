@@ -61,8 +61,8 @@ func (c *Client) NewRequest(method, urlString string) (*http.Request, error) {
 
 }
 
-// Response is a Prismatic API response.  This wraps the standard http.Response
-// returned from Prismatic.
+// Response is a Mzalendo API response.  This wraps the standard http.Response
+// returned from Mzalendo.
 type Response struct {
 	*http.Response
 }
