@@ -2,10 +2,21 @@
 Package mzalendo provides a client for using the Mzalendo API.
 Access different parts of the  API using the various
 services.
-         client := mzalendo.NewClient(nil)
+         c := mzalendo.NewClient(nil)
          // search for an interest
-         results, err := client.Api.GetPerson("1290")
+         results, err := c.Api.GetPerson("1290")
 The full Mzalendo API is documented at http://info.mzalendo.com/help/api.
+To use the package in App Engine you need to create a http.Client that uses
+urlfetch package.
+        deadline := time.Duration(60) * time.Second
+		client := &http.Client{
+		Transport: &urlfetch.Transport{
+			Context:  c,
+			Deadline: deadline,
+		},
+	}
+
+	c := mzalendo.NewClient(client)
 */
 package mzalendo
 
