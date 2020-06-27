@@ -1,2 +1,8 @@
 # go-mzalendo
-Very simple Golang library to access the Mzalendo (http://www.mzalendo.com) API 
+Update:
+Mzalendo no longer offers an API so this package will not work.
+
+Very simple Golang package to access the Mzalendo (http://www.mzalendo.com) 
+API 
+
+
